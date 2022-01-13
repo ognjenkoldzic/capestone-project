@@ -1,0 +1,52 @@
+import { Link, NavLink, Route, Routes, useParams } from "react-router-dom";
+import styled from "styled-components";
+
+function FavouritesRendered({ favPaintings, onHandleFavClick }) {
+  //  const finishingYear =
+  //     favPaint[0].objectBeginDate !== favPaint[0].objectEndDate
+  //       ? `- ${favPaint[0].objectEndDate}`
+  //       : "";
+
+  const favsToRender = favPaintings.map((favPaint) => (
+    <FavCard key={favPaint[0].id}>
+      <Link to={favPaint[0].id}>
+        <img
+          src={favPaint[0].image}
+          alt="Kein Bild"
+          height="300 px"
+          onClick={() => onHandleFavClick(favPaint)}
+        />
+      </Link>
+      <div>
+        <h3>
+          {favPaint[0].title} <span>❌</span>
+        </h3>
+        <h4>{favPaint[0].artistName}</h4>
+        <h4>
+          Production Year{"("}s{")"}: {favPaint[0].objectBeginDate}{" "}
+          {favPaint[0].objectBeginDate !== favPaint[0].objectEndDate
+            ? `- ${favPaint[0].objectEndDate}`
+            : ""}{" "}
+          | {favPaint[0].medium} | MASSe
+        </h4>
+        <form action="">
+          <label htmlFor="notes">
+            Notes:
+            <input type="text" name="notes" />{" "}
+          </label>
+        </form>
+      </div>
+    </FavCard>
+  ));
+  //onClick={() => onRemoveFromFavourites(object)}
+  //onClick={()=> onHandleClick(favPaintings)}
+  return <div>{favsToRender}</div>;
+}
+
+export default FavouritesRendered;
+
+const FavCard = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
