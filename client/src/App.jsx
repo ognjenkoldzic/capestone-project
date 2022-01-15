@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
 import Collection from "./Collection";
 import PaintingDetails from "./PintingDetails";
 import FavouritesRendered from "./FavouritesRendered";
@@ -8,11 +9,12 @@ import LandingPage from "./LandingPage";
 import InfoPage from "./InfoPage";
 import NavBar from "./NavBar";
 import HeaderBar from "./HeaderBar";
+import MemoryPlay from "./components/MemoryPlay";
 
 function App() {
   const [objects, setObjects] = useState([]);
   const [selectedPainting, setSelectedPainting] = useState([]);
-  const [favPaintings, setFavPainitngs] = useState([]);
+  const [favPaintings, setFavPaintings] = useState([]);
   const [selectedFavPainting, setSelectedFavPainting] = useState([]);
 
   useEffect(() => {
@@ -20,7 +22,6 @@ function App() {
       const data = await fetch("./data.json");
       const json = await data.json();
       const objectsData = json;
-      //console.log(objectsData);
       setObjects(objectsData);
     };
 
@@ -28,10 +29,10 @@ function App() {
   }, []);
 
   function handleClick(object) {
-    const singlePaining = objects.filter(
+    const singlePainting = objects.filter(
       (selected) => selected.id === object.id
     );
-    setSelectedPainting(singlePaining);
+    setSelectedPainting(singlePainting);
   }
   function addToFavourites(detailedObject) {
     if (
@@ -40,9 +41,9 @@ function App() {
       const favToKeep = favPaintings.filter(
         (favPaint) => favPaint[0].id !== detailedObject[0].id
       );
-      setFavPainitngs(favToKeep);
+      setFavPaintings(favToKeep);
     } else {
-      setFavPainitngs([...favPaintings, detailedObject]);
+      setFavPaintings([...favPaintings, detailedObject]);
     }
   }
   function handleFavClick(clickedFav) {
@@ -51,56 +52,53 @@ function App() {
     );
     setSelectedFavPainting(favPaintingToShow);
   }
-  //
-  console.log(selectedPainting);
-  // console.log(favPaintings)
-  // console.log(selectedFavPainting)
-  //{favPaintings.length > 0 &&
-  //{selectedPainting.length > 0 &&
+
   return (
     <div className="App">
-      <header>
+      <Header>
         <HeaderBar />
-      </header>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="info" element={<InfoPage />} />
-        <Route
-          path="collection"
-          element={
-            <Collection collection={objects} onHandleClick={handleClick} />
-          }
-        />
-        <Route
-          path="collection/:id"
-          element={
-            <PaintingDetails
-              clickedObject={selectedPainting}
-              onAddToFavourites={addToFavourites}
-              favPaintings={favPaintings}
-            />
-          }
-        />
-        <Route
-          path="favourites"
-          element={
-            <FavouritesRendered
-              favPaintings={favPaintings}
-              onHandleFavClick={handleFavClick}
-            />
-          }
-        />
-        <Route
-          path="favourites/:id"
-          element={
-            <PaintingDetails
-              clickedObject={selectedFavPainting}
-              onAddToFavourites={addToFavourites}
-            />
-          }
-        />
-      </Routes>
-
+      </Header>
+      <Maincontainer>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/info" element={<InfoPage />} />
+          <Route
+            path="/collection"
+            element={
+              <Collection collection={objects} onHandleClick={handleClick} />
+            }
+          />
+          <Route
+            path="/collection/:id"
+            element={
+              <PaintingDetails
+                clickedObject={selectedPainting}
+                onAddToFavourites={addToFavourites}
+                favPaintings={favPaintings}
+              />
+            }
+          />
+          <Route
+            path="/favourites"
+            element={
+              <FavouritesRendered
+                favPaintings={favPaintings}
+                onHandleFavClick={handleFavClick}
+              />
+            }
+          />
+          <Route
+            path="/favourites/:id"
+            element={
+              <PaintingDetails
+                clickedObject={selectedFavPainting}
+                onAddToFavourites={addToFavourites}
+              />
+            }
+          />
+          <Route path="/play" element={<MemoryPlay />} />
+        </Routes>
+      </Maincontainer>
       <footer>
         <NavBar />
       </footer>
@@ -109,3 +107,10 @@ function App() {
 }
 
 export default App;
+
+const Maincontainer = styled.section`
+  margin-top: 2rem;
+`;
+const Header = styled.header`
+  margin-top: 0;
+`;

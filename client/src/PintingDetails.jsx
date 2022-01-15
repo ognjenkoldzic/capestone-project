@@ -1,24 +1,12 @@
 import { useParams } from "react-router-dom";
 
 function PaintingDetails({ clickedObject, onAddToFavourites, favPaintings }) {
-  //, onAddToFavourites, favPaintings
   let { id } = useParams();
-  // const [favPaintings, setFavPainitngs] = useState([])
-  // function addToFavourites(object){
-  // setFavPainitngs([...favPaintings, object])
-  // }
-
-  //console.log(object)
-
-  //{objectToRender}
-  //{favPaintings.some((favPaint)=> favPaint[0].id===object[0].id)
-  //        ?'😻':'💩'}
 
   const finishingYear =
     clickedObject[0].objectBeginDate !== clickedObject[0].objectEndDate
       ? `- ${clickedObject[0].objectEndDate}`
       : "";
-  //height="300 px"
 
   return (
     <div>
