@@ -11,7 +11,7 @@ import NavBar from "./NavBar";
 import HeaderBar from "./HeaderBar";
 import MemoryPlay from "./components/MemoryPlay";
 import { saveToLocal, loadFromLocal } from "./lib/localStorage";
-import SearchBar from "./components/SearchBar";
+import SearchBarCollection from "./components/SearchBar";
 
 function App() {
   const localStorageFavPaintings = loadFromLocal("_favPaintings");
@@ -74,15 +74,13 @@ function App() {
           <Route path="/info" element={<InfoPage />} />
           <Route
             path="/collection"
-            element={[
-              <SearchBar collection={objects} onHandleClick={handleClick} />,
-              objects.map((singleObject) => (
-                <SingleCollectionPainting
-                  singleObject={singleObject}
-                  onHandleClick={handleClick}
-                />
-              )),
-            ]}
+            element={
+              <SearchBarCollection
+                collection={objects}
+                onHandleClick={handleClick}
+                placeholder="Search by Artist, Title, Year..."
+              />
+            }
           />
           <Route
             path="/collection/:id"

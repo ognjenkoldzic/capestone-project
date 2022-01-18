@@ -4,7 +4,7 @@ import { useState } from "react";
 
 //onHandleClick placeholder,
 
-function SearchBar({ collection, onHandleClick }) {
+function SearchBarCollection({ collection, onHandleClick, placeholder }) {
   const [searchWord, setSearchWord] = useState("");
 
   return (
@@ -14,7 +14,7 @@ function SearchBar({ collection, onHandleClick }) {
           type="search"
           name="search"
           id="search"
-          // placeholder={placeholder}
+          placeholder={placeholder}
           value={searchWord}
           onChange={(event) => setSearchWord(event.target.value)}
         />
@@ -31,11 +31,21 @@ function SearchBar({ collection, onHandleClick }) {
           </svg>
         </div>
       </div>
-
+      {/* searchWord && */}
       <div className="dataResults">
         {collection
-          .filter((item) =>
-            item.artistName.toLowerCase().includes(searchWord.toLowerCase())
+          .filter(
+            (item) =>
+              item.artistName
+                .toLowerCase()
+                .includes(searchWord.toLowerCase()) ||
+              item.title.toLowerCase().includes(searchWord.toLowerCase()) ||
+              item.objectBeginDate
+                .toLowerCase()
+                .startsWith(searchWord.toLowerCase()) ||
+              item.objectEndDate
+                .toLowerCase()
+                .startsWith(searchWord.toLowerCase())
           )
           .map((singleObject) => (
             <div key={singleObject.id}>
@@ -50,4 +60,4 @@ function SearchBar({ collection, onHandleClick }) {
   );
 }
 
-export default SearchBar;
+export default SearchBarCollection;
