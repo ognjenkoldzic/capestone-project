@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import Collection from "./Collection";
+import SingleCollectionPainting from "./SingleCollectionPainting";
 import PaintingDetails from "./PintingDetails";
 import FavouritesRendered from "./FavouritesRendered";
 import LandingPage from "./LandingPage";
@@ -10,11 +10,16 @@ import InfoPage from "./InfoPage";
 import NavBar from "./NavBar";
 import HeaderBar from "./HeaderBar";
 import MemoryPlay from "./components/MemoryPlay";
+import { saveToLocal, loadFromLocal } from "./lib/localStorage";
 
 function App() {
+  const localStorageFavPaintings = loadFromLocal("_favPaintings");
+
   const [objects, setObjects] = useState([]);
   const [selectedPainting, setSelectedPainting] = useState([]);
-  const [favPaintings, setFavPaintings] = useState([]);
+  const [favPaintings, setFavPaintings] = useState(
+    localStorageFavPaintings || []
+  );
   const [selectedFavPainting, setSelectedFavPainting] = useState([]);
 
   useEffect(() => {
@@ -27,6 +32,10 @@ function App() {
 
     fetchData().catch(console.error);
   }, []);
+
+  useEffect(() => {
+    saveToLocal("_favPaintings", favPaintings);
+  }, [favPaintings]);
 
   function handleClick(object) {
     const singlePainting = objects.filter(
@@ -64,9 +73,12 @@ function App() {
           <Route path="/info" element={<InfoPage />} />
           <Route
             path="/collection"
-            element={
-              <Collection collection={objects} onHandleClick={handleClick} />
-            }
+            element={objects.map((singleObject) => (
+              <SingleCollectionPainting
+                singleObject={singleObject}
+                onHandleClick={handleClick}
+              />
+            ))}
           />
           <Route
             path="/collection/:id"
@@ -109,8 +121,9 @@ function App() {
 export default App;
 
 const Maincontainer = styled.section`
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 `;
 const Header = styled.header`
-  margin-top: 0;
+  background-color: #8f8e8e;
 `;
