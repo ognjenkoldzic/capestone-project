@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-function SingleCollectionPainting({ singleObject, onHandleClick }) {
+function SingleCollectionPainting({ singleObject, onOnHandleClick }) {
   return (
     <div>
       <article key={singleObject.id}>
@@ -9,7 +9,7 @@ function SingleCollectionPainting({ singleObject, onHandleClick }) {
           <CollectionElements
             src={singleObject.image}
             alt="Kein Bild"
-            onClick={() => onHandleClick(singleObject)}
+            onClick={() => onOnHandleClick(singleObject)}
           />
         </Link>
       </article>
