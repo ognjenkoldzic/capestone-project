@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import SingleCollectionPainting from "./SingleCollectionPainting";
 import PaintingDetails from "./PintingDetails";
-import FavouritesRendered from "./FavouritesRendered";
 import LandingPage from "./LandingPage";
 import InfoPage from "./InfoPage";
 import NavBar from "./NavBar";
@@ -12,6 +10,7 @@ import HeaderBar from "./HeaderBar";
 import MemoryPlay from "./components/MemoryPlay";
 import { saveToLocal, loadFromLocal } from "./lib/localStorage";
 import SearchBarCollection from "./components/SearchBar";
+import SingleFavPainting from "./SingleFavPainting";
 
 function App() {
   const localStorageFavPaintings = loadFromLocal("_favPaintings");
@@ -94,13 +93,14 @@ function App() {
           />
           <Route
             path="/favourites"
-            element={
-              <FavouritesRendered
-                favPaintings={favPaintings}
-                onHandleFavClick={handleFavClick}
+            element={favPaintings.map((favPaint) => (
+              <SingleFavPainting
+                favPaint={favPaint}
                 onAddToFavourites={addToFavourites}
+                onHandleFavClick={handleFavClick}
+                favPaintings={favPaintings}
               />
-            }
+            ))}
           />
           <Route
             path="/favourites/:id"
