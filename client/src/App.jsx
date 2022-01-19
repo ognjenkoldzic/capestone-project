@@ -98,6 +98,7 @@ function App() {
               <FavouritesRendered
                 favPaintings={favPaintings}
                 onHandleFavClick={handleFavClick}
+                onAddToFavourites={addToFavourites}
               />
             }
           />
@@ -107,6 +108,7 @@ function App() {
               <PaintingDetails
                 clickedObject={selectedFavPainting}
                 onAddToFavourites={addToFavourites}
+                favPaintings={favPaintings}
               />
             }
           />

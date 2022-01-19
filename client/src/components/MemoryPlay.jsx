@@ -89,7 +89,6 @@ function MemoryPlay() {
       }
     }
   }, [choiceOne, choiceTwo]);
-  console.log(cards);
 
   //reset choice and increase turn
 
