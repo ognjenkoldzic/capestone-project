@@ -1,14 +1,25 @@
 import styled from "styled-components";
 import SingleCollectionPainting from "../SingleCollectionPainting";
 import { useState } from "react";
+import Dropdown from "./Dropdown/Dropdown";
 
-//onHandleClick placeholder,
-
-function SearchBarCollection({ collection, onHandleClick, placeholder }) {
+function SearchBarCollection({ objects, onHandleClick, placeholder }) {
   const [searchWord, setSearchWord] = useState("");
+  const [value, setValue] = useState(null);
 
   return (
     <div className="search">
+      <div style={{ width: 300 }}>
+        <Dropdown
+          options={objects}
+          prompt="Select or type Artist..."
+          value={value}
+          id="id"
+          label="artistName"
+          onChange={(val) => setValue(val)}
+          onHandleClick={onHandleClick}
+        />
+      </div>
       <SearchInput className="searchInput">
         <input
           type="search"
@@ -32,30 +43,32 @@ function SearchBarCollection({ collection, onHandleClick, placeholder }) {
         </div>
       </SearchInput>
       {/* searchWord && */}
-      <div className="dataResults">
-        {collection
-          .filter(
-            (item) =>
-              item.artistName
-                .toLowerCase()
-                .includes(searchWord.toLowerCase()) ||
-              item.title.toLowerCase().includes(searchWord.toLowerCase()) ||
-              item.objectBeginDate
-                .toLowerCase()
-                .startsWith(searchWord.toLowerCase()) ||
-              item.objectEndDate
-                .toLowerCase()
-                .startsWith(searchWord.toLowerCase())
-          )
-          .map((singleObject) => (
-            <div key={singleObject.id}>
-              <SingleCollectionPainting
-                singleObject={singleObject}
-                onOnHandleClick={onHandleClick}
-              />
-            </div>
-          ))}
-      </div>
+      {(value || searchWord) && (
+        <div className="dataResults">
+          {objects
+            .filter(
+              (item) =>
+                item.artistName
+                  .toLowerCase()
+                  .includes(searchWord.toLowerCase()) ||
+                item.title.toLowerCase().includes(searchWord.toLowerCase()) ||
+                item.objectBeginDate
+                  .toLowerCase()
+                  .startsWith(searchWord.toLowerCase()) ||
+                item.objectEndDate
+                  .toLowerCase()
+                  .startsWith(searchWord.toLowerCase())
+            )
+            .map((singleObject) => (
+              <div key={singleObject.id}>
+                <SingleCollectionPainting
+                  singleObject={singleObject}
+                  onHandleClick={onHandleClick}
+                />
+              </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 }

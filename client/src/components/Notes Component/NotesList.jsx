@@ -1,11 +1,40 @@
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { saveToLocal, loadFromLocal } from "../../lib/localStorage";
 import NoteForm from "./NoteForm";
 import Note from "./Note";
 
-function NotesList() {
+function NotesList({ favPaint, onUpdateFavPaint }) {
+  //   const localStorageFavNotes = loadFromLocal("_favNotes");
+
   const [notes, setNotes] = useState([]);
+  //localStorageFavNotes ||
+  //   const saveNotesToLocal = (key, itemsToSet) =>
+  //     localStorage.setItem(key, JSON.stringify(itemsToSet));
+
+  //   useEffect(() => {
+  //     saveNotesToLocal("_favNotes", notes);
+  //   }, [notes]);
+
+  // useEffect(()=>{
+
+  //     function addNotesToFavCard(note){
+  //         if(favPaint[0].notes.some((favNote)=> favNote.id === note.id))
+  //         {
+  //             const notesToKeep = favPaint[0].notes.filter((favNote)=> favNote.id !== note.id )
+  //         }
+  //     }
+
+  // },[notes])
+
+  //   useEffect(() => {
+  //     favPaint[0].notes.push(notes);
+  //   }, [notes]);
+
+  useEffect(() => {
+    favPaint[0].notes = notes;
+  }, [notes]);
 
   function addNote(note) {
     if (!note.text || /^\s*$/.test(note.text)) {
@@ -13,9 +42,11 @@ function NotesList() {
     }
 
     const newNotes = [note, ...notes]; //welche Reihenfolge?
-    setNotes(newNotes);
-    //console.log(note,...notes);
+    onUpdateFavPaint(favPaint, newNotes);
+    //setNotes(newNotes);
   }
+  //   console.log(favPaint[0].notes);
+  //   console.log(notes, "hey");
   function updateNote(noteId, newValue) {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
@@ -26,7 +57,7 @@ function NotesList() {
   }
 
   function removeNote(id) {
-    const removeArr = [...notes].filter((note) => note.id !== id);
+    const removeArr = [...notes].filter((note) => note.id !== id); //favPaint[0].notes , removeArr, onUpdateFavPaint
 
     setNotes(removeArr);
   }
@@ -37,8 +68,12 @@ function NotesList() {
 
   return (
     <div>
+      <Note
+        notes={favPaint[0].notes}
+        onRemoveNote={removeNote}
+        onUpdateNote={updateNote}
+      />
       <NoteForm onSubmit={addNote} />
-      <Note notes={notes} onRemoveNote={removeNote} onUpdateNote={updateNote} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ function SingleFavPainting({
   favPaintings,
   onAddToFavourites,
   onHandleFavClick,
+  onUpdateFavPaint,
 }) {
   return (
     <div>
@@ -57,7 +58,7 @@ function SingleFavPainting({
               : ""}{" "}
             | {favPaint[0].medium} | MASSe
           </h4>
-          <NotesList />
+          <NotesList favPaint={favPaint} onUpdateFavPaint={onUpdateFavPaint} />
           {/* <form action="">
             <label htmlFor="notes">
               Notes:
