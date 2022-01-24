@@ -20,7 +20,7 @@ function SingleFavPainting({
           />
         </Link>
         <div>
-          <h3>
+          <p>
             {favPaint[0].title}{" "}
             <span onClick={() => onAddToFavourites(favPaintings)}>
               {favPaintings.some(
@@ -28,9 +28,9 @@ function SingleFavPainting({
               ) ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  height="36px"
+                  height="14px"
                   viewBox="0 0 24 24"
-                  width="36px"
+                  width="14px"
                   fill="#ffffff"
                 >
                   <path d="M0 0h24v24H0V0z" fill="none" />
@@ -39,9 +39,9 @@ function SingleFavPainting({
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  height="36px"
+                  height="14px"
                   viewBox="0 0 24 24"
-                  width="36px"
+                  width="14px"
                   fill="#ffffff"
                 >
                   <path d="M0 0h24v24H0V0z" fill="none" />
@@ -49,23 +49,17 @@ function SingleFavPainting({
                 </svg>
               )}
             </span>
-          </h3>
-          <h4>{favPaint[0].artistName}</h4>
-          <h4>
-            Production Year{"("}s{")"}: {favPaint[0].objectBeginDate}{" "}
-            {favPaint[0].objectBeginDate !== favPaint[0].objectEndDate
-              ? `- ${favPaint[0].objectEndDate}`
-              : ""}{" "}
-            | {favPaint[0].medium} | MASSe
-          </h4>
+            <span>
+              {"("}
+              {favPaint[0].objectBeginDate}{" "}
+              {favPaint[0].objectBeginDate !== favPaint[0].objectEndDate
+                ? `- ${favPaint[0].objectEndDate}`
+                : ""}
+              {")"}{" "}
+            </span>
+          </p>{" "}
+          <p>by {favPaint[0].artistName}</p>
           <NotesList favPaint={favPaint} onUpdateFavPaint={onUpdateFavPaint} />
-          {/* <form action="">
-            <label htmlFor="notes">
-              Notes:
-              <input type="text" name="notes" />{" "}
-            </label>
-            <button>Save Notes</button>
-          </form> */}
         </div>
       </FavCard>
     </div>

@@ -1,21 +1,25 @@
 import styled from "styled-components";
 import SingleCollectionPainting from "../SingleCollectionPainting";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dropdown from "./Dropdown/Dropdown";
 
 function SearchBarCollection({ objects, onHandleClick, placeholder }) {
   const [searchWord, setSearchWord] = useState("");
   const [value, setValue] = useState(null);
 
+  useEffect(() => {
+    setValue(null);
+  }, []); //????
+
   return (
     <div className="search">
       <div style={{ width: 300 }}>
         <Dropdown
           options={objects}
-          prompt="Select or type Artist..."
+          prompt="Select or type Title..."
           value={value}
           id="id"
-          label="artistName"
+          label="title"
           onChange={(val) => setValue(val)}
           onHandleClick={onHandleClick}
         />
@@ -43,7 +47,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
         </div>
       </SearchInput>
       {/* searchWord && */}
-      {(value || searchWord) && (
+      {searchWord && (
         <div className="dataResults">
           {objects
             .filter(

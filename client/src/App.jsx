@@ -64,8 +64,8 @@ function App() {
     );
     setSelectedFavPainting(favPaintingToShow);
   }
-  function updateFavPaint(favPaint, newNotes) {
-    const updatedFavPaint = [{ ...favPaint[0], notes: newNotes }];
+  function updateFavPaint(favPaint, incomingNotes) {
+    const updatedFavPaint = [{ ...favPaint[0], notes: incomingNotes }];
     const indexOfFavPaintToUpdate = favPaintings.findIndex(
       (painting) => painting[0].id === favPaint[0].id
     );
@@ -115,12 +115,14 @@ function App() {
           />
           <Route
             path="/collection"
-            element={objects.map((singleObject) => (
-              <SingleCollectionPainting
-                singleObject={singleObject}
-                onHandleClick={handleClick}
-              />
-            ))}
+            element={objects
+              .sort((a, b) => 0.5 - Math.random())
+              .map((singleObject) => (
+                <SingleCollectionPainting
+                  singleObject={singleObject}
+                  onHandleClick={handleClick}
+                />
+              ))}
           />
           <Route
             path="/collection/:id"
