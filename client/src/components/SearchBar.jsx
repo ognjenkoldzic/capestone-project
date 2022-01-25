@@ -179,7 +179,7 @@ const SearchInput = styled.div`
   input {
     background-color: var(--primary);
     border-radius: 0.5rem;
-    width: 78vw;
+    width: 78vw; //problematische...da nicht den anderen InputFilter entspricht..
     height: 42px;
   }
   svg {
