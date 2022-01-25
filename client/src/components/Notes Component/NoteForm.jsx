@@ -81,7 +81,7 @@ function NoteForm({ onSubmit, edit }) {
 export default NoteForm;
 
 const NewTodoFormButton = styled.button`
-  padding: 0.3rem 0.3rem;
+  padding: 0.2rem 0.2rem;
   border: none;
   background: #505050;
   color: var(--secondary);

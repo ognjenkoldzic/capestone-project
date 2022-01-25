@@ -60,7 +60,7 @@ function Dropdown({
   //onClick={() => setOpen((prev) => !prev)}
 
   return (
-    <>
+    <DropAndResultsWrapper>
       <DropdownStyle className="dropdown">
         {/* <div className="control"> */}
         <SelectedValueInput className="selected-value">
@@ -103,12 +103,17 @@ function Dropdown({
           />
         )}
       </div>
-    </>
+    </DropAndResultsWrapper>
   );
 }
 
 export default Dropdown;
 
+const DropAndResultsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 const DropdownStyle = styled.div`
   position: relative;
   color: #333;
@@ -163,7 +168,7 @@ const SelectedValueInput = styled.div`
     font-size: 1rem;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: 0.5rem;
     box-sizing: border-box;
     cursor: default;
     outline: none;
