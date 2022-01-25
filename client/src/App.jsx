@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import SingleCollectionPainting from "./SingleCollectionPainting";
 import PaintingDetails from "./PintingDetails";
-import FavouritesRendered from "./FavouritesRendered";
 import LandingPage from "./LandingPage";
 import InfoPage from "./InfoPage";
 import NavBar from "./NavBar";
@@ -12,6 +10,8 @@ import HeaderBar from "./HeaderBar";
 import MemoryPlay from "./components/MemoryPlay";
 import { saveToLocal, loadFromLocal } from "./lib/localStorage";
 import SearchBarCollection from "./components/SearchBar";
+import SingleFavPainting from "./SingleFavPainting";
+import SingleCollectionPainting from "./SingleCollectionPainting";
 
 function App() {
   const localStorageFavPaintings = loadFromLocal("_favPaintings");
@@ -22,7 +22,7 @@ function App() {
     localStorageFavPaintings || []
   );
   const [selectedFavPainting, setSelectedFavPainting] = useState([]);
-
+  console.log(favPaintings);
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch("./data.json");
@@ -37,6 +37,8 @@ function App() {
   useEffect(() => {
     saveToLocal("_favPaintings", favPaintings);
   }, [favPaintings]);
+
+  // console.log(objects.map((object) => object.artistName));
 
   function handleClick(object) {
     const singlePainting = objects.filter(
@@ -62,6 +64,25 @@ function App() {
     );
     setSelectedFavPainting(favPaintingToShow);
   }
+  function updateFavPaint(favPaint, incomingNotes) {
+    const updatedFavPaint = [{ ...favPaint[0], notes: incomingNotes }];
+    const indexOfFavPaintToUpdate = favPaintings.findIndex(
+      (painting) => painting[0].id === favPaint[0].id
+    );
+    const firstPartFavPaintings = favPaintings.slice(
+      0,
+      indexOfFavPaintToUpdate
+    );
+    const secondPartFavPaintings = favPaintings.slice(
+      indexOfFavPaintToUpdate + 1
+    );
+    const updatedFavPaintings = [
+      ...firstPartFavPaintings,
+      updatedFavPaint,
+      ...secondPartFavPaintings,
+    ];
+    setFavPaintings(updatedFavPaintings);
+  }
 
   return (
     <div className="App">
@@ -73,14 +94,35 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/info" element={<InfoPage />} />
           <Route
-            path="/collection"
+            path="/search"
             element={
               <SearchBarCollection
-                collection={objects}
+                objects={objects}
                 onHandleClick={handleClick}
                 placeholder="Search by Artist, Title, Year..."
               />
             }
+          />
+          <Route
+            path="/search/:id"
+            element={
+              <PaintingDetails
+                clickedObject={selectedPainting}
+                onAddToFavourites={addToFavourites}
+                favPaintings={favPaintings}
+              />
+            }
+          />
+          <Route
+            path="/collection"
+            element={objects
+              .sort((a, b) => 0.5 - Math.random())
+              .map((singleObject) => (
+                <SingleCollectionPainting
+                  singleObject={singleObject}
+                  onHandleClick={handleClick}
+                />
+              ))}
           />
           <Route
             path="/collection/:id"
@@ -94,13 +136,15 @@ function App() {
           />
           <Route
             path="/favourites"
-            element={
-              <FavouritesRendered
-                favPaintings={favPaintings}
-                onHandleFavClick={handleFavClick}
+            element={favPaintings.map((favPaint) => (
+              <SingleFavPainting
+                favPaint={favPaint}
                 onAddToFavourites={addToFavourites}
+                onHandleFavClick={handleFavClick}
+                favPaintings={favPaintings}
+                onUpdateFavPaint={updateFavPaint}
               />
-            }
+            ))}
           />
           <Route
             path="/favourites/:id"
@@ -125,7 +169,7 @@ function App() {
 export default App;
 
 const Maincontainer = styled.section`
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 5rem;
 `;
 const Header = styled.header`
