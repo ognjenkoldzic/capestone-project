@@ -22,7 +22,7 @@ function App() {
     localStorageFavPaintings || []
   );
   const [selectedFavPainting, setSelectedFavPainting] = useState([]);
-  console.log(favPaintings);
+  //console.log(favPaintings);
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch("./data.json");
