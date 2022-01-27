@@ -26,7 +26,7 @@ function App() {
   console.log(favPaintings);
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("./data.json");
+      const data = await fetch("/data.json");
       const json = await data.json();
       const objectsData = json;
       setObjects(objectsData);
