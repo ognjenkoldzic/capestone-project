@@ -12,6 +12,7 @@ import { saveToLocal, loadFromLocal } from "./lib/localStorage";
 import SearchBarCollection from "./components/SearchBar";
 import SingleFavPainting from "./SingleFavPainting";
 import SingleCollectionPainting from "./SingleCollectionPainting";
+import FlashCardsMain from "./components/FalshCards/FlashCardsMain";
 
 function App() {
   const localStorageFavPaintings = loadFromLocal("_favPaintings");
@@ -30,6 +31,7 @@ function App() {
       const objectsData = json;
       setObjects(objectsData);
     };
+    //"./data.json"
 
     fetchData().catch(console.error);
   }, []);
@@ -157,6 +159,8 @@ function App() {
             }
           />
           <Route path="/play" element={<MemoryPlay />} />
+
+          <Route path="/learn" element={<FlashCardsMain />} />
         </Routes>
       </Maincontainer>
       <footer>
