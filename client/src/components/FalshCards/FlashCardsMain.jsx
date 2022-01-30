@@ -1,39 +1,41 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import FlashCardsList from "./FlashCardsList";
 import "./TempFlashCard.css";
 import { v4 as uuidv4 } from "uuid";
+import FAVFlashCardsList from "./FAVFlashCardList";
 //{  "src":"https://images.metmuseum.org/CRDImages/ep/web-large/DP-14344-001.jpg",}
 
-const SAMPLE_FLASHCARDS = [
-  {
-    id: 1,
-    question: "Who painted this Painting?",
-    answer: "TEST",
-    options: ["not really needed", "not really needed22"],
-  },
-  {
-    id: 2,
-    question: "Who painted this Painting? ",
-    answer: "TEST2",
-    options: ["not really needed2", "not really needed22"],
-  },
-  {
-    id: 3,
-    question: "Who painted this Painting?",
-    answer: "TEST3",
-    options: ["not really needed3", "not really needed22"],
-  },
-];
+function FlashCardsMain({ favPaintings }) {
+  const [flashCards, setFlashCards] = useState([]);
+  // const categoryEl = useRef(); //
+  // const [categories, setCategories] = useState([]);
+  const amountEl = useRef();
 
-function FlashCardsMain() {
-  const [flashCards, setFlashCards] = useState(SAMPLE_FLASHCARDS);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch("https://opentdb.com/api_category.php");
+  //     const json = await data.json();
+  //     const categoriesData = json;
+  //     setCategories(categoriesData.trivia_categories);
+  //   };
 
-  useEffect(() => {
+  //   fetchData().catch(console.error);
+  // }, []);
+
+  function decodeString(str) {
+    const textArea = document.createElement("textarea");
+    textArea.innerHTML = str;
+    return textArea.value;
+  }
+
+  function handleFlashCardsSubmit(event) {
+    event.preventDefault();
     const fetchData = async () => {
       const data = await fetch(
-        "https://opentdb.com/api.php?amount=10&category=25"
+        `https://opentdb.com/api.php?amount=${amountEl.current.value}&category=25`
       );
+
       const json = await data.json();
       const questionsData = json;
       const singleQuestion = questionsData.results.map(
@@ -45,7 +47,7 @@ function FlashCardsMain() {
           ];
 
           return {
-            id: `${index}-${Date.now()}`, //uuidv4() eventluell
+            id: uuidv4(), //`${index}-${Date.now()}`,
             question: decodeString(questionItem.question),
             answer: answer,
             options: options.sort(() => Math.random() - 0.5),
@@ -54,20 +56,46 @@ function FlashCardsMain() {
       );
       setFlashCards(singleQuestion);
     };
-
     fetchData().catch(console.error);
-  }, []);
-
-  function decodeString(str) {
-    const textArea = document.createElement("textarea");
-    textArea.innerHTML = str;
-    return textArea.value;
   }
 
   return (
-    <FlashCardListContainer>
-      <FlashCardsList flashCards={flashCards} />
-    </FlashCardListContainer>
+    <section>
+      <FAVFlashCardsList favPaintings={favPaintings} />
+      <form className="header" onSubmit={handleFlashCardsSubmit}>
+        {/* <div className="form-group">
+          <label htmlFor="category">Category</label>
+          <select id="category" ref={categoryEl}>
+            {categories.map((category) => {
+              return (
+                <option value={category.id} key={category.id}>
+                  {" "}
+                  {category.name}
+                </option>
+              );
+            })}
+          </select>
+        </div> */}
+        <div className="form-group">
+          <label htmlFor="amount">Number Of Questions</label>
+          <input
+            type="number"
+            id="amount"
+            min="1"
+            max="29"
+            step="1"
+            defaultValue={10}
+            ref={amountEl}
+          />
+        </div>
+        <div className="from-group">
+          <button className="btn">Generate</button>
+        </div>
+      </form>
+      <FlashCardListContainer>
+        <FlashCardsList flashCards={flashCards} />
+      </FlashCardListContainer>
+    </section>
   );
 }
 

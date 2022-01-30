@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import SingleMemoryCard from "./SingleMemoryCard";
 
+//sort(() => Math.random() - 0.5)
 const cardImages = [
   {
     src: "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14344-001.jpg",

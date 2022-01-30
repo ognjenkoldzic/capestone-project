@@ -11,21 +11,19 @@ function SingleFavPainting({
 }) {
   return (
     <div>
-      <FavCard key={favPaint[0].id}>
-        <Link to={favPaint[0].id}>
+      <FavCard key={favPaint.id}>
+        <Link to={favPaint.id}>
           <FavImg
-            src={favPaint[0].image}
+            src={favPaint.image}
             alt="Kein Bild"
             onClick={() => onHandleFavClick(favPaint)}
           />
         </Link>
         <div>
           <p>
-            {favPaint[0].title}{" "}
+            {favPaint.title}{" "}
             <span onClick={() => onAddToFavourites(favPaintings)}>
-              {favPaintings.some(
-                (favPaint) => favPaint[0].id === favPaintings[0].id
-              ) ? (
+              {favPaintings.some((fav) => fav.id === favPaint.id) ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="14px"
@@ -51,14 +49,14 @@ function SingleFavPainting({
             </span>
             <span>
               {"("}
-              {favPaint[0].objectBeginDate}{" "}
-              {favPaint[0].objectBeginDate !== favPaint[0].objectEndDate
-                ? `- ${favPaint[0].objectEndDate}`
+              {favPaint.objectBeginDate}{" "}
+              {favPaint.objectBeginDate !== favPaint.objectEndDate
+                ? `- ${favPaint.objectEndDate}`
                 : ""}
               {")"}{" "}
             </span>
           </p>{" "}
-          <p>by {favPaint[0].artistName}</p>
+          <p>by {favPaint.artistName}</p>
           <NotesList favPaint={favPaint} onUpdateFavPaint={onUpdateFavPaint} />
         </div>
       </FavCard>

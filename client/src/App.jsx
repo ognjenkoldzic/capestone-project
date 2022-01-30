@@ -18,11 +18,11 @@ function App() {
   const localStorageFavPaintings = loadFromLocal("_favPaintings");
 
   const [objects, setObjects] = useState([]);
-  const [selectedPainting, setSelectedPainting] = useState([]);
+  const [selectedPainting, setSelectedPainting] = useState({});
   const [favPaintings, setFavPaintings] = useState(
     localStorageFavPaintings || []
   );
-  const [selectedFavPainting, setSelectedFavPainting] = useState([]);
+
   console.log(favPaintings);
   useEffect(() => {
     const fetchData = async () => {
@@ -43,33 +43,27 @@ function App() {
   // console.log(objects.map((object) => object.artistName));
 
   function handleClick(object) {
-    const singlePainting = objects.filter(
+    const singlePainting = objects.find(
       (selected) => selected.id === object.id
     );
     setSelectedPainting(singlePainting);
   }
+
   function addToFavourites(detailedObject) {
-    if (
-      favPaintings.some((favPaint) => favPaint[0].id === detailedObject[0].id)
-    ) {
+    if (favPaintings.some((favPaint) => favPaint.id === detailedObject.id)) {
       const favToKeep = favPaintings.filter(
-        (favPaint) => favPaint[0].id !== detailedObject[0].id
+        (favPaint) => favPaint.id !== detailedObject.id
       );
       setFavPaintings(favToKeep);
     } else {
       setFavPaintings([...favPaintings, detailedObject]);
     }
   }
-  function handleFavClick(clickedFav) {
-    const favPaintingToShow = favPaintings.filter(
-      (selected) => selected.id === clickedFav.id
-    );
-    setSelectedFavPainting(favPaintingToShow);
-  }
+
   function updateFavPaint(favPaint, incomingNotes) {
-    const updatedFavPaint = [{ ...favPaint[0], notes: incomingNotes }];
+    const updatedFavPaint = { ...favPaint, notes: incomingNotes };
     const indexOfFavPaintToUpdate = favPaintings.findIndex(
-      (painting) => painting[0].id === favPaint[0].id
+      (painting) => painting.id === favPaint.id
     );
     const firstPartFavPaintings = favPaintings.slice(
       0,
@@ -142,7 +136,7 @@ function App() {
               <SingleFavPainting
                 favPaint={favPaint}
                 onAddToFavourites={addToFavourites}
-                onHandleFavClick={handleFavClick}
+                onHandleFavClick={handleClick}
                 favPaintings={favPaintings}
                 onUpdateFavPaint={updateFavPaint}
               />
@@ -152,7 +146,7 @@ function App() {
             path="/favourites/:id"
             element={
               <PaintingDetails
-                clickedObject={selectedFavPainting}
+                clickedObject={selectedPainting}
                 onAddToFavourites={addToFavourites}
                 favPaintings={favPaintings}
               />
@@ -160,7 +154,10 @@ function App() {
           />
           <Route path="/play" element={<MemoryPlay />} />
 
-          <Route path="/learn" element={<FlashCardsMain />} />
+          <Route
+            path="/learn"
+            element={<FlashCardsMain favPaintings={favPaintings} />}
+          />
         </Routes>
       </Maincontainer>
       <footer>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import "./TempFlashCard.css";
 
-function SingleFlashCard({ flashCard }) {
+function FAVSingleFlashCard({ favPainting }) {
   const [flip, setFlip] = useState(false);
   const [height, setHeight] = useState("initail");
 
@@ -16,9 +16,7 @@ function SingleFlashCard({ flashCard }) {
   }
 
   useEffect(setMaxHeight, [
-    flashCard.question,
-    flashCard.answer,
-    flashCard.options,
+    favPainting.image, //
   ]);
   useEffect(() => {
     window.addEventListener("resize", setMaxHeight);
@@ -28,21 +26,23 @@ function SingleFlashCard({ flashCard }) {
   return (
     <CardStyled height={height} flip={flip} onClick={() => setFlip(!flip)}>
       <CardFront flip={flip} ref={frontEl}>
-        {flashCard.question}
-        <div>
-          {flashCard.options.map((option) => {
-            return <div key={option}>{option}</div>;
-          })}
-        </div>
+        <p>Who paintend this Painting? Can you remember your notes?</p>
+        <img src={favPainting.image} alt="No Image" />
       </CardFront>
       <CardBack flip={flip} ref={backEl}>
-        {flashCard.answer}
+        {favPainting.artistName}
+        <div>
+          {favPainting.notes &&
+            favPainting.notes.map((note) => {
+              return <div key={note.id}>{note.text}</div>;
+            })}
+        </div>
       </CardBack>
     </CardStyled>
   );
 }
 
-export default SingleFlashCard;
+export default FAVSingleFlashCard;
 
 const CardStyled = styled.div`
   display: flex;
