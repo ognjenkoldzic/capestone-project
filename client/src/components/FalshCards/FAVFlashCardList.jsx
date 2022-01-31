@@ -15,7 +15,8 @@ function FAVFlashCardsList({ favPaintings }) {
 export default FAVFlashCardsList;
 
 const TempGrid = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 1rem;
 

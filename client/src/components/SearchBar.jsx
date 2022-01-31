@@ -11,7 +11,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
   useEffect(() => {
     setValue(null);
   }, []); //????
-  console.log(btnClicked);
+  //console.log(btnClicked);
   return (
     <SearchWrapper className="search">
       <ToggleBtnPair>

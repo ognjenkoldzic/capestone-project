@@ -23,7 +23,6 @@ function App() {
     localStorageFavPaintings || []
   );
 
-  console.log(favPaintings);
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch("/data.json");

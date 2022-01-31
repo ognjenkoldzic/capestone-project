@@ -4,7 +4,7 @@ import "./TempFlashCard.css";
 
 function FAVSingleFlashCard({ favPainting }) {
   const [flip, setFlip] = useState(false);
-  const [height, setHeight] = useState("initail");
+  const [height, setHeight] = useState("inital");
 
   const frontEl = useRef();
   const backEl = useRef();
@@ -14,22 +14,23 @@ function FAVSingleFlashCard({ favPainting }) {
     const backHeight = backEl.current.getBoundingClientRect().height;
     setHeight(Math.max(frontHeight, backHeight, 100));
   }
-
-  useEffect(setMaxHeight, [
-    favPainting.image, //
-  ]);
+  //favPainting.image;
+  useEffect(setMaxHeight, [favPainting.image]);
   useEffect(() => {
     window.addEventListener("resize", setMaxHeight);
     return () => window.removeEventListener("resize", setMaxHeight);
   }, []);
 
+  //
+  //
+  //
   return (
     <CardStyled height={height} flip={flip} onClick={() => setFlip(!flip)}>
-      <CardFront flip={flip} ref={frontEl}>
+      <CardFront ref={frontEl} flip={flip}>
         <p>Who paintend this Painting? Can you remember your notes?</p>
-        <img src={favPainting.image} alt="No Image" />
+        <img height={height} src={favPainting.image} alt="No Image" />
       </CardFront>
-      <CardBack flip={flip} ref={backEl}>
+      <CardBack ref={backEl} flip={flip}>
         {favPainting.artistName}
         <div>
           {favPainting.notes &&
@@ -41,7 +42,7 @@ function FAVSingleFlashCard({ favPainting }) {
     </CardStyled>
   );
 }
-
+//console.log(height);
 export default FAVSingleFlashCard;
 
 const CardStyled = styled.div`
@@ -52,19 +53,29 @@ const CardStyled = styled.div`
   border-radius: 0.25rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0, 0.3);
   background-color: #505050;
-  height: ${(props) => props.height}px;
-  /* width: 90vw; */
+  height: ${(props) => (props.height ? props.height : 500)}px;
+  width: 70vw;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: ${(props) => (props.flip ? "rotateY(180deg)" : "0")};
 `;
+//${(props) => props.height}px;
+//height: 110vw;
 
 const CardFront = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   padding: 1rem;
   backface-visibility: hidden;
   transform: rotateY(0deg);
   div {
+  }
+  img {
+    height: 50vw;
+    position: relative;
   }
 `;
 const CardBack = styled.div`
@@ -73,3 +84,5 @@ const CardBack = styled.div`
   backface-visibility: hidden;
   transform: rotateY(180deg);
 `;
+const StyledIMG = styled.img``;
+// /* ${(props) => props.height}px;    */
