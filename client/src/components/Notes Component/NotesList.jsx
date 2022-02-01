@@ -6,7 +6,7 @@ import NoteForm from "./NoteForm";
 import Note from "./Note";
 
 function NotesList({ favPaint, onUpdateFavPaint }) {
-  const [notes, setNotes] = useState(favPaint[0].notes);
+  const [notes, setNotes] = useState(favPaint.notes);
 
   function addNote(note) {
     if (!note.text || /^\s*$/.test(note.text)) {
@@ -40,7 +40,7 @@ function NotesList({ favPaint, onUpdateFavPaint }) {
     <div>
       <NoteForm onSubmit={addNote} />
       <Note
-        notes={favPaint[0].notes}
+        notes={favPaint.notes}
         onRemoveNote={removeNote}
         onUpdateNote={updateNote}
       />

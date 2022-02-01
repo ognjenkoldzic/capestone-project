@@ -1,23 +1,36 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 function PaintingDetails({ clickedObject, onAddToFavourites, favPaintings }) {
   let { id } = useParams();
 
+  const [painting, setPainting] = useState(clickedObject);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("/data.json");
+      const json = await data.json();
+      const objectsData = json;
+      setPainting(objectsData.find((obj) => obj.id === id));
+    };
+    if (Object.keys(painting).length === 0) {
+      fetchData();
+    }
+  }, []);
+
   const finishingYear =
-    clickedObject[0].objectBeginDate !== clickedObject[0].objectEndDate
-      ? `- ${clickedObject[0].objectEndDate}`
+    painting.objectBeginDate !== painting.objectEndDate
+      ? `- ${painting.objectEndDate}`
       : "";
 
   return (
     <Container className="container">
-      <Card className="card" key={clickedObject[0].id}>
+      <Card className="card" key={painting.id}>
         <h1>
-          {clickedObject[0].title}{" "}
-          <span onClick={() => onAddToFavourites(clickedObject)}>
-            {favPaintings.some(
-              (favPaint) => favPaint[0].id === clickedObject[0].id
-            ) ? (
+          {painting.title}{" "}
+          <span onClick={() => onAddToFavourites(painting)}>
+            {favPaintings.some((favPaint) => favPaint.id === painting.id) ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="36px"
@@ -42,10 +55,9 @@ function PaintingDetails({ clickedObject, onAddToFavourites, favPaintings }) {
             )}
           </span>
         </h1>
-        <DetailedImg src={clickedObject[0].image} alt="Kein Bild" />
+        <DetailedImg src={painting.image} alt="Kein Bild" />
         <DetailedData>
-          {clickedObject[0].objectBeginDate} {finishingYear} |{" "}
-          {clickedObject[0].medium} | {id}
+          {painting.objectBeginDate} {finishingYear} | {painting.medium} | {id}
         </DetailedData>
         <CardBody className="card-body">
           {/* <Tag className="tag">TagToDefine</Tag> */}
@@ -56,7 +68,7 @@ function PaintingDetails({ clickedObject, onAddToFavourites, favPaintings }) {
               alt="No Pic"
             />
             <div className="user-info">
-              <span>{clickedObject[0].artistName}</span>
+              <span>{painting.artistName}</span>
             </div>
           </User>
           <p>
