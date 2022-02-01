@@ -76,8 +76,10 @@ function FlashCardsMain({ favPaintings }) {
             className="header"
             onSubmit={handleFlashCardsSubmit}
           >
-            <div className="form-group">
-              <label htmlFor="amount">Number Of Questions</label>
+            <FormGroup className="form-group">
+              <label htmlFor="amount">
+                How many Questions do you would like to answer?
+              </label>
               <input
                 type="number"
                 id="amount"
@@ -87,10 +89,10 @@ function FlashCardsMain({ favPaintings }) {
                 defaultValue={10}
                 ref={amountEl}
               />
-            </div>
-            <div className="from-group">
-              <button className="btn">Generate</button>
-            </div>
+            </FormGroup>
+            <FormGroup className="from-group">
+              <QuizBtn className="btn">Generate</QuizBtn>
+            </FormGroup>
           </HeaderFlashCardForm>
           <FlashCardListContainer>
             <FlashCardsList flashCards={flashCards} />
@@ -146,9 +148,34 @@ const HeaderFlashCardForm = styled.form`
   padding: 0 1.5rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
   margin: 1rem;
+  border-radius: 0.25rem;
 `;
 
 const FlashCardListContainer = styled.div`
   /* display: flex;
   justify-content: center; */
+`;
+const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+
+  label {
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  input {
+    width: 6rem;
+    margin: 0.5rem;
+  }
+`;
+const QuizBtn = styled.button`
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 0.5em 0.5em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
 `;

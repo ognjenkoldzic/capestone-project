@@ -105,7 +105,7 @@ function MemoryPlay() {
   return (
     <div>
       <h1>The Met Memory</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <MemoryBtn onClick={shuffleCards}>New Game</MemoryBtn>
       <p>Turns: {turns}</p>
       <CardGrid className="card-grid">
         {cards &&
@@ -126,8 +126,17 @@ function MemoryPlay() {
 export default MemoryPlay;
 
 const CardGrid = styled.div`
-  margin-top: 40px;
+  margin: 40px 6px 0px 6px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+`;
+
+const MemoryBtn = styled.button`
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 0.5em 0.5em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
 `;

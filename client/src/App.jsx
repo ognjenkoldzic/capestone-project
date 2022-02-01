@@ -28,9 +28,9 @@ function App() {
       const data = await fetch("/data.json");
       const json = await data.json();
       const objectsData = json;
-      setObjects(objectsData);
+      const sortedObjectsData = objectsData.sort((a, b) => 0.5 - Math.random());
+      setObjects(sortedObjectsData);
     };
-    //"./data.json"
 
     fetchData().catch(console.error);
   }, []);
@@ -110,14 +110,13 @@ function App() {
           />
           <Route
             path="/collection"
-            element={objects
-              .sort((a, b) => 0.5 - Math.random())
-              .map((singleObject) => (
-                <SingleCollectionPainting
-                  singleObject={singleObject}
-                  onHandleClick={handleClick}
-                />
-              ))}
+            element={objects.map((singleObject) => (
+              <SingleCollectionPainting
+                key={singleObject.id}
+                singleObject={singleObject}
+                onHandleClick={handleClick}
+              />
+            ))}
           />
           <Route
             path="/collection/:id"
@@ -133,6 +132,7 @@ function App() {
             path="/favourites"
             element={favPaintings.map((favPaint) => (
               <SingleFavPainting
+                key={favPaint.id}
                 favPaint={favPaint}
                 onAddToFavourites={addToFavourites}
                 onHandleFavClick={handleClick}
