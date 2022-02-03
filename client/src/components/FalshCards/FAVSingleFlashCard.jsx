@@ -20,24 +20,47 @@ function FAVSingleFlashCard({ favPainting }) {
     window.addEventListener("resize", setMaxHeight);
     return () => window.removeEventListener("resize", setMaxHeight);
   }, []);
-
+  const finishingFavYear =
+    favPainting.objectBeginDate !== favPainting.objectEndDate
+      ? `- ${favPainting.objectEndDate}`
+      : "";
   //
   //
   //
   return (
     <CardStyled height={height} flip={flip} onClick={() => setFlip(!flip)}>
       <CardFront ref={frontEl} flip={flip}>
-        <p>Who paintend this Painting? Can you remember your notes?</p>
+        <h3>Questions:</h3>
+        <ul>
+          <li>Who paintend this painting?</li>
+          <li>In which year(s) was it painted?</li>
+          <li>Can you remember your notes?</li>
+        </ul>
         <img height={height} src={favPainting.image} alt="No Image" />
       </CardFront>
       <CardBack ref={backEl} flip={flip}>
-        {favPainting.artistName}
-        <div>
-          {favPainting.notes &&
-            favPainting.notes.map((note) => {
-              return <div key={note.id}>{note.text}</div>;
-            })}
-        </div>
+        <h3>Answers:</h3>
+        <ul>
+          <li>
+            Painter: <span>{favPainting.artistName}</span>
+          </li>
+          <li>
+            Year(s):{" "}
+            <span>
+              {favPainting.objectBeginDate}
+              {finishingFavYear}
+            </span>
+          </li>
+          <li>
+            Notes:
+            <ol>
+              {favPainting.notes &&
+                favPainting.notes.map((note) => {
+                  return <li key={note.id}>{note.text}</li>;
+                })}
+            </ol>
+          </li>
+        </ul>
       </CardBack>
     </CardStyled>
   );
@@ -54,7 +77,7 @@ const CardStyled = styled.div`
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0, 0.3);
   background-color: #505050;
   height: ${(props) => (props.height ? props.height : 500)}px;
-  width: 70vw;
+  width: 75vw;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: ${(props) => (props.flip ? "rotateY(180deg)" : "0")};
@@ -71,18 +94,42 @@ const CardFront = styled.div`
   padding: 1rem;
   backface-visibility: hidden;
   transform: rotateY(0deg);
-  div {
+  h3 {
+    margin: 0.5rem;
+  }
+  ul {
+    text-align: left;
+    margin: 0.2rem;
+    padding-left: 1rem;
   }
   img {
+    margin-top: 0.5rem;
     height: 50vw;
     position: relative;
   }
 `;
 const CardBack = styled.div`
+  top: 1rem;
   position: absolute;
   padding: 1rem;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+  h3 {
+    margin: 0.5rem;
+  }
+  ul {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: left;
+    margin: 0.2rem;
+    padding-left: 1rem;
+    li span {
+      font-style: italic;
+    }
+    li ol {
+      font-style: italic;
+    }
+  }
 `;
 const StyledIMG = styled.img``;
 // /* ${(props) => props.height}px;    */

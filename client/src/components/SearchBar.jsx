@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown/Dropdown";
 function SearchBarCollection({ objects, onHandleClick, placeholder }) {
   const [searchWord, setSearchWord] = useState("");
   const [value, setValue] = useState(null);
-  const [btnClicked, setBtnClicked] = useState(false);
+  const [btnClicked, setBtnClicked] = useState("btnTextSearch");
 
   useEffect(() => {
     setValue(null);
@@ -45,7 +45,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
         <DropdownWrapper>
           <Dropdown
             options={objects}
-            prompt="Select or type Title..."
+            prompt="Select or type a title..."
             value={value}
             id="id"
             label="title"
@@ -58,7 +58,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
         <DropdownWrapper>
           <Dropdown
             options={objects}
-            prompt="Select or type artist..."
+            prompt="Select or type an artist..."
             value={value}
             id="id"
             label="artistName"
@@ -77,7 +77,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
             value={searchWord}
             onChange={(event) => setSearchWord(event.target.value)}
           />
-          <div className="searchIcon">
+          {/* <div className="searchIcon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -88,7 +88,7 @@ function SearchBarCollection({ objects, onHandleClick, placeholder }) {
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
             </svg>
-          </div>
+          </div> */}
         </SearchInput>
       )}
 
@@ -177,11 +177,14 @@ const SearchInput = styled.div`
   justify-content: center;
 
   input {
+    line-height: 1.5;
+    font-size: 1rem;
     background-color: var(--primary);
+    border: none;
     border-radius: 0.5rem;
-    width: 78vw; //problematische...da nicht den anderen InputFilter entspricht..
-    height: 42px;
-  }
-  svg {
+    cursor: default;
+    outline: none;
+    width: 100%;
+    padding: 8px 52px 8px 10px;
   }
 `;

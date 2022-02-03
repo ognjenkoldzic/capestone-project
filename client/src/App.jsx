@@ -28,8 +28,8 @@ function App() {
       const data = await fetch("/data.json");
       const json = await data.json();
       const objectsData = json;
-      const sortedObjectsData = objectsData.sort((a, b) => 0.5 - Math.random());
-      setObjects(sortedObjectsData);
+      //const sortedObjectsData = objectsData.sort((a, b) => 0.5 - Math.random());
+      setObjects(objectsData);
     };
 
     fetchData().catch(console.error);
@@ -110,13 +110,16 @@ function App() {
           />
           <Route
             path="/collection"
-            element={objects.map((singleObject) => (
-              <SingleCollectionPainting
-                key={singleObject.id}
-                singleObject={singleObject}
-                onHandleClick={handleClick}
-              />
-            ))}
+            element={[
+              <h1>The Collection</h1>,
+              objects.map((singleObject) => (
+                <SingleCollectionPainting
+                  key={singleObject.id}
+                  singleObject={singleObject}
+                  onHandleClick={handleClick}
+                />
+              )),
+            ]}
           />
           <Route
             path="/collection/:id"
@@ -130,16 +133,19 @@ function App() {
           />
           <Route
             path="/favourites"
-            element={favPaintings.map((favPaint) => (
-              <SingleFavPainting
-                key={favPaint.id}
-                favPaint={favPaint}
-                onAddToFavourites={addToFavourites}
-                onHandleFavClick={handleClick}
-                favPaintings={favPaintings}
-                onUpdateFavPaint={updateFavPaint}
-              />
-            ))}
+            element={[
+              <h1>Your Favourites</h1>,
+              favPaintings.map((favPaint) => (
+                <SingleFavPainting
+                  key={favPaint.id}
+                  favPaint={favPaint}
+                  onAddToFavourites={addToFavourites}
+                  onHandleFavClick={handleClick}
+                  favPaintings={favPaintings}
+                  onUpdateFavPaint={updateFavPaint}
+                />
+              )),
+            ]}
           />
           <Route
             path="/favourites/:id"
@@ -155,7 +161,10 @@ function App() {
 
           <Route
             path="/learn"
-            element={<FlashCardsMain favPaintings={favPaintings} />}
+            element={[
+              <h1>Learn Your Favs + Art Quiz</h1>,
+              <FlashCardsMain favPaintings={favPaintings} />,
+            ]}
           />
         </Routes>
       </Maincontainer>
