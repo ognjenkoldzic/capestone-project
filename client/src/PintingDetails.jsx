@@ -64,19 +64,18 @@ function PaintingDetails({ clickedObject, onAddToFavourites, favPaintings }) {
 
           <User className="user">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg"
+              src={
+                painting.artistFace
+                  ? painting.artistFace
+                  : "https://www.pngall.com/wp-content/uploads/5/Profile-Male.png"
+              }
               alt="No Pic"
             />
             <div className="user-info">
               <span>{painting.artistName}</span>
             </div>
           </User>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            expedita a perferendis corporis minus porro saepe, ad in. Officia
-            eligendi illum inventore nobis autem labore molestias facilis odit
-            commodi sint.
-          </p>
+          <p>{painting.description}</p>
         </CardBody>
       </Card>
     </Container>

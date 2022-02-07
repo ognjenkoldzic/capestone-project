@@ -167,9 +167,8 @@ const SelectedValueInput = styled.div`
     line-height: 1.5;
     font-size: 1rem;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none; //1px solid #ccc;
     border-radius: 0.5rem;
-    box-sizing: border-box;
     cursor: default;
     outline: none;
     padding: 8px 52px 8px 10px;

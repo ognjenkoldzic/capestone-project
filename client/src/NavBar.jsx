@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -85,7 +85,11 @@ function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/">
+          {/* <NavLink to="/tickets"> */}
+          <a
+            target="_blank"
+            href="https://engage.metmuseum.org/admission/?promocode=46070"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               enableBackground="new 0 0 24 24"
@@ -105,7 +109,8 @@ function NavBar() {
                 </g>
               </g>
             </svg>
-          </NavLink>
+          </a>
+          {/* </NavLink> */}
         </li>
       </NavBarBottom>
     </NavBarContainer>

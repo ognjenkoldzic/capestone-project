@@ -26,7 +26,7 @@ function Note({ notes, onRemoveNote, onUpdateNote }) {
         <TextIconContainer key={note.id}>
           <span>{note.text}</span>
 
-          <EditIcon
+          {/* <EditIcon
             className="EditIcon"
             onClick={() => setEdit({ id: note.id, value: note.text })}
           >
@@ -40,7 +40,7 @@ function Note({ notes, onRemoveNote, onUpdateNote }) {
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
             </svg>
-          </EditIcon>
+          </EditIcon> */}
           <DeleteIcon
             className="DeleteIcon"
             onClick={() => onRemoveNote(note.id)}
@@ -69,13 +69,14 @@ const TextIconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 `;
 
 const DeleteIcon = styled.span`
   svg {
     padding: 0.2rem 0.2rem;
     border: none;
-    background: #505050;
+    background: #8f8e8e;
     color: var(--secondary);
     font-weight: bold;
     border-radius: 30%;
@@ -87,7 +88,7 @@ const EditIcon = styled.span`
   svg {
     padding: 0.2rem 0.2rem;
     border: none;
-    background: #505050;
+    background: #8f8e8e;
     color: var(--secondary);
     font-weight: bold;
     border-radius: 30%;

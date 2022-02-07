@@ -24,7 +24,7 @@ function NoteForm({ onSubmit, edit }) {
   }
 
   return (
-    <form className="NoteForm" onSubmit={handleSubmit}>
+    <StyledNoteForm className="NoteForm" onSubmit={handleSubmit}>
       {edit ? (
         <>
           <label htmlFor="note"></label>
@@ -74,16 +74,20 @@ function NoteForm({ onSubmit, edit }) {
           </NewTodoFormButton>
         </>
       )}
-    </form>
+    </StyledNoteForm>
   );
 }
 
 export default NoteForm;
 
+const StyledNoteForm = styled.form`
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+`;
 const NewTodoFormButton = styled.button`
-  padding: 0.2rem 0.2rem;
   border: none;
-  background: #505050;
+  background: #8f8e8e;
   color: var(--secondary);
   font-weight: bold;
   border-radius: 30%;
@@ -93,7 +97,6 @@ const NewTodoFormButton = styled.button`
   svg {
     color: var(--secondary);
     font-weight: bold;
-
     cursor: pointer;
   }
 `;

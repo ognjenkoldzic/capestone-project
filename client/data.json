@@ -7,7 +7,8 @@
     "objectEndDate": "1846",
     "medium": "Oil on canvas",
     "dimensions": "39 1/2 x 32 1/4 in. (100.3 x 81.9 cm)",
-    "notes": []
+    "notes": [],
+    "description": "Throughout his career Delacroix was inspired by the novels of Sir Walter Scott, a favorite author of the French Romantics. This painting depicts a scene from Ivanhoe: the Jewish heroine Rebecca, who had been confined in the castle of Front de Boeuf (seen in flames), is carried off by two enslaved Muslim warriors commanded by the covetous Christian knight Bois-Guilbert. The contorted, interlocking poses and compacted space, which shifts abruptly from the elevated foreground to the fortress behind, create a sense of intense drama. Apart from the still life at the lower left, the only element of calm is Rebecca herself."
 },
 
 {
@@ -19,7 +20,8 @@
     "objectEndDate": "1878",
     "medium": "Oil on canvas",
     "dimensions": "60 1/2 x 74 7/8 in. (153.7 x 190.2 cm)",
-    "notes": []
+    "notes": [],
+    "description": "In this commissioned portrait, as Marcel Proust observed, Renoir gave expression to 'the poetry of an elegant home and the beautiful dresses of our time.' In the Japanese-style sitting room of her Parisian townhouse—the décor and chic gown testifying to her stylish taste—Marguerite Charpentier sits beside her son, Paul. At age three, his locks are still uncut and, in keeping with current fashion, he is dressed identically to his sister Georgette, perched on the family dog. The well-connected publisher's wife, who hosted elite literary salons attended by such writers as Flaubert, the Goncourts, and Zola, used her influence to ensure that the painting enjoyed a choice spot at the Salon of 1879."
 },
 
 {
@@ -31,7 +33,8 @@
     "objectEndDate": "1788",
     "medium": "Oil on canvas",
     "dimensions": "102 1/4 x 76 5/8 in. (259.7 x 194.6 cm)",
-    "notes": []
+    "notes": [],
+    "description": "A landmark of European portraiture that asserts a modern, scientifically minded couple in fashionable but simple dress, this painting was nonetheless excluded from the Salon of 1789 for fears it would further ignite revolutionary zeal. Technical analysis has revealed that a first iteration excluded the scientific instruments and would have been a far more conventional portrait of a wealthy, fashionable couple of the tax-collector class. Lavoisier was a pioneering chemist credited with the discovery of oxygen and the chemical composition of water through experiments in which his wife actively collaborated. However, he was also involved in studies of gunpowder and a misunderstanding about his removal of this precious commodity from the Bastille in the summer of 1789 threw his alliances into question. This mishap and his status as a tax collector (the more prosaic means by which he funded his scientific research) led him to be guillotined in 1794."
 },
 
 {
@@ -39,11 +42,13 @@
     "title": "Wheat Field with Cypresses",
     "image": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1567.jpg",
     "artistName": "Vincent van Gogh",
+    "artistFace":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg/800px-Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg",
     "objectBeginDate": "1889",
     "objectEndDate": "1889",
     "medium": "Oil on canvas",
     "dimensions": "28 7/8 × 36 3/4 in. (73.2 × 93.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": "Cypresses gained ground in Van Gogh’s work by late June 1889 when he resolved to devote one of his first series in Saint-Rémy to the towering trees. Distinctive for their rich impasto, his exuberant on-the-spot studies include the Met’s close-up vertical view of cypresses (49.30) and this majestic horizontal composition, which he illustrated in reed-pen drawings sent to his brother on July 2. Van Gogh regarded the present work as one of his “best” summer landscapes and was prompted that September to make two studio renditions: one on the same scale (National Gallery, London) and the other a smaller replica, intended as a gift for his mother and sister (private collection)."
 },
 
 {
@@ -51,11 +56,13 @@
     "title": "A Bouquet of Flowers",
     "image": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-19451-001.jpg",
     "artistName": "Clara Peeters",
+    "artistFace": "https://dutch-art-reproductions.com/img/portrait-clara-peeters.png",
     "objectBeginDate": "1607",
     "objectEndDate": "1617",
     "medium": "Oil on wood",
     "dimensions": "18 1/8 × 12 5/8 in. (46 × 32 cm)",
-    "notes": ""
+    "notes": [],
+    "description": "Clara Peeters was a founding figure in the history of European still life, a genre that attracted many women artists who did not have the opportunity to study nude models. In this ambitious composition, Peeters paid close attention to naturalistic details like dewdrops, insect bites, and drooping tulips that hint at transience and decay. At the same time, she asserted her own achievement by inscribing her signature in the stone ledge, juxtaposed with a fallen sprig of forget-me-nots. The crisp edges and acute observation that characterize her work reveal the close link between floral painting and botanical illustration during the Scientific Revolution."
 },
 
 {
@@ -67,7 +74,8 @@
     "objectEndDate": "1896",
     "medium": "Oil on canvas",
     "dimensions": "98 1/2 × 51 3/8 in. (250.2 × 130.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": "In the lower, terrestrial portion of this composition, the shepherd kneels in an Alpine landscape, while in the upper, celestial portion, a vision unfolds of eight nude women. In contrast to the shepherd’s muscular, naturalistically depicted body, their pale, ethereal forms indicate that they are apparitions. The women may symbolize enlightenment, harmony with nature, and erotic desire. Their frieze-like arrangement and stylized, rhythmic gestures recall the work of Puvis de Chavannes, which Hodler greatly admired. This ambitious composition, first exhibited in Geneva in 1896, was one of the paintings that earned the Swiss artist notoriety for his exploration of sexuality, mortality, and the unconscious."
 },
 
 {
@@ -79,7 +87,8 @@
     "objectEndDate": "1627",
     "medium": "Oil on canvas",
     "dimensions": "49 x 39 5/8 in. (124.5 x 100.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": "Van Uffel was a wealthy Flemish merchant who lived in Venice, where Van Dyck probably painted this portrait. Inspired by Venetian portraits of the High Renaissance, Van Dyck depicted Van Uffel as a learned gentleman, with signs of his varied interests: dividers, a recorder, the bow of a viola da gamba, an antique head, a drawing, and a celestial globe. Van Uffel’s unusual posture, as though turning to address the beholder, lends dynamism to his portrait."
 },
 
 {
@@ -90,8 +99,9 @@
     "objectBeginDate": "1315",
     "objectEndDate": "1325",
     "medium": "Tempera on wood, gold ground",
-    "dimensions": "17 3/4 x 17 1/4 in. (45.1 x 43.8 cm)",
-    "notes": ""
+    "dimensions": "45.1 x 43.8 cm",
+    "notes": [],
+    "description": "This picture—at once austere and tender—belongs to a series of seven showing the life of Christ. The masterly depiction of the stable, which is viewed from slightly below, and the columnar solidity of the figures are typical of Giotto, the founder of European painting. The impetuous action of the kneeling king, who picks up the Christ Child, and Mary’s expression of concern translate the biblical account into deeply human terms. As the sculptor Ghiberti declared (ca. 1450): '[Giotto] made [art] natural and gave it gentleness.'"
 },
 
 {
@@ -102,8 +112,9 @@
     "objectBeginDate": "1570",
     "objectEndDate": "1579",
     "medium": "Oil on canvas",
-    "dimensions": "81 x 63 3/8 in. (205.7 x 161 cm)",
-    "notes": ""
+    "dimensions": "205.7 x 161 cm",
+    "notes": [],
+    "description": "In this visually opulent and sensual painting, Cupid binds Mars (the god of war) to Venus (the goddess of love) with a love knot. It celebrates the civilizing and nurturing effects of love, as milk flows from Venus’s breast and Mars’s warhorse is restrained. Possibly commissioned by Emperor Maximilian II, the painting was owned by Emperor Rudolf II in Prague by 1621, along with other mythological works by the artist. A masterpiece of light and color, works such as this had an enduring impact on later artists including Velázquez and Giambattista Tiepolo."
 },
 
 {
@@ -114,8 +125,9 @@
     "objectBeginDate": "1550",
     "objectEndDate": "1559",
     "medium": "Oil on canvas",
-    "dimensions": "42 x 52 1/2 in. (106.7 x 133.4 cm)",
-    "notes": ""
+    "dimensions": "106.7 x 133.4 cm",
+    "notes": [],
+    "description": "Tales from Ovid’s Metamorphoses inspired Titian to paint what he called poesie, or poetry in paint. Here, Venus tries to stop her lover from departing for the hunt, fearing—correctly—that he would be killed. The mood of sensuality, conveyed by the beautiful depiction of Venus, seen from the back, enhances the viewer’s sense of the tragic end to this story, expressed through their exchanged glances and the frightened Cupid. Titian’s workshop made multiple versions of this composition, but this one is of exceptional quality and was painted by Titian himself."
 },
 
 {
@@ -126,8 +138,9 @@
     "objectBeginDate": "1752",
     "objectEndDate": "1752",
     "medium": "Oil on canvas",
-    "dimensions": "73 x 54 7/8 in. (185.4 x 139.4 cm)",
-    "notes": ""
+    "dimensions": "185.4 x 139.4 cm)",
+    "notes": [],
+    "description": "The canvas, which is among Tiepolo's largest and most dazzling oil sketches, represents Apollo about to embark on his daily course across the sky. Deities around the sun god symbolize the planets and allegorical figures on the cornice represent the Four Continents. On April 20, 1752, Tiepolo presented this preliminary sketch to Carl Philipp von Greiffenklau, prince-bishop of Würzburg, as his proposal for the decoration of the staircase ceiling of the Residenz, often considered the artist's greatest achievement and a landmark of European painting."
 },
 
 {
@@ -138,8 +151,9 @@
     "objectBeginDate": "1643",
     "objectEndDate": "1643",
     "medium": "Oil on canvas",
-    "dimensions": "41 3/8 x 59 7/8 in. (105.1 x 152.1 cm)",
-    "notes": ""
+    "dimensions": "105.1 x 152.1 cm)",
+    "notes": [],
+    "description": "Claude Lorrain’s luminous skies and atmospheric effects are milestones in European painting. Like his contemporary Poussin, Claude viewed landscape through a classical lens: he represents the women of Troy setting fire to their ships in an effort to end years of wandering after their city was seized by the Greeks. Distant clouds and rain presage the storm sent by Jupiter at Aeneas’s request to quench the blaze. The subject must have particularly appealed to the man who commissioned it. Cardinal Girolamo Farnese was a prelate who returned to Rome in 1643, after years of itinerant service as papal nuncio combating Calvinism in remote Alpine cantons of the Swiss Confederation."
 },
 
 {
@@ -150,8 +164,9 @@
     "objectBeginDate": "1490",
     "objectEndDate": "1493",
     "medium": "Tempera and gold on wood",
-    "dimensions": "13 1/2 x 10 in. (34.3 x 25.4 cm)",
-    "notes": ""
+    "dimensions": "34.3 x 25.4 cm)",
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -163,7 +178,8 @@
     "objectEndDate": "1774",
     "medium": "Oil on canvas",
     "dimensions": "32 x 25 3/4 in. (81.3 x 65.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": "This painting belongs to a celebrated group of Fragonards known as the fantasy figures. The canvas is broadly brushed, with exceptional virtuosity, panache, and a sense of speed. The model has recently been identified as the aristocratic salon hostess Marie Emilie Coignet de Courson (1716–1806). Her costume recalls the court dress of Queen Marie de Médicis (1573–1642) in Rubens’s famous series of paintings (Musée du Louvre, Paris) which Fragonard had occasion to study in 1767. There is humor in the contrast between the ample proportions of the lady and the small size of her lapdog; the curl of his silky tail echoes her gray ringlets."
 },
 
 {
@@ -174,8 +190,9 @@
     "objectBeginDate": "1340",
     "objectEndDate": "1344",
     "medium": "Tempera and gold leaf on wood",
-    "dimensions": "Overall 16 1/2 x 12 1/2 in. (41.9 x 31.8 cm); painted surface 14 1/8 x 10 1/8 in. (35.9 x 25.7 cm)",
-    "notes": ""
+    "dimensions": "41.9 x 31.8 cm",
+    "notes": [],
+    "description": "One of the great innovators of European painting, Pietro Lorenzetti imbued this familiar biblical subject with a new sense of pathos and dramatic intensity. Details such as the piercing of Christ's side with a spear, the breaking of the legs of the thieves, and the Virgin swooning into the arms of her companions ensure an emotional response from the viewer. A century later, Van Eyck, in his painting in The Met, added to these pictorial strategies the extraordinary naturalism of a landscape setting replacing the gold ground of Italian painting and introducing a sense that the Crucifixion took place within the context of contemporary life."
 },
 
 {
@@ -186,8 +203,9 @@
     "objectBeginDate": "1487",
     "objectEndDate": "1489",
     "medium": "Oil on wood",
-    "dimensions": "35 x 28 in. (88.9 x 71.1 cm)",
-    "notes": ""
+    "dimensions": "88.9 x 71.1 cm)",
+    "notes": [],
+    "description": "Separated from our everyday world by a parapet, the figures nonetheless engage the viewer with their gazes. A cloth of honor has been pulled aside to reveal a distant landscape, where we witness the transition from dormant to verdant nature—a metaphor, like the dawn sky, for death and rebirth. The asymmetrical composition looks ahead to the work of Titian. When Albrecht Dürer visited Venice, he declared Bellini the best painter. The fine Venetian frame is of the period."
 },
 
 {
@@ -198,8 +216,9 @@
     "objectBeginDate": "1568",
     "objectEndDate": "1568",
     "medium": "Oil on Baltic oak",
-    "dimensions": "50 5/8 × 68 7/8 in. (128.6 × 174.9 cm)",
-    "notes": ""
+    "dimensions": "128.6 × 174.9 cm)",
+    "notes": [],
+    "description": "Signed and dated 1568, this masterfully composed view of a daily fish market represents the new genre of still-life painting, initiated by Joachim Beuckelaer and his teacher, Pieter Aertsen, who lived and worked in Antwerp. It was painted during the tumultuous times of the Iconoclasm (1566), which disrupted the art market and motivated a change from purely religious to more secular themes. Here the flourishing fish industry is celebrated through the display of the great bounty from the sea. Such pictures also increasingly embraced a moralizing subtext, warning against the excesses of food and sexual pleasures."
 },
 
 {
@@ -210,8 +229,10 @@
     "objectBeginDate": "1627",
     "objectEndDate": "1627",
     "medium": "Oil on canvas",
-    "dimensions": "105 1/2 x 73 in. (268 x 185.4 cm)",
-    "notes": ""
+    "dimensions": "268 x 185.4 cm)",
+    "notes": [],
+    "description": "Reni, the most celebrated painter of seventeenth-century Italy, was particularly famous for the elegance of his compositions and the beauty and grace of his female heads, earning him the epithet “Divine.” This altarpiece, with its otherworldly space shaped by clouds and putti in a high-keyed palette, was commissioned in about 1627 by the Spanish ambassador in Rome for the Infanta of Spain. It later hung in the cathedral of Seville, where it exercised a deep influence on Spanish painters, especially Murillo."
+    
 },
 
 {
@@ -223,7 +244,8 @@
     "objectEndDate": "1864",
     "medium": "Oil on canvas",
     "dimensions": "81 1/4 x 41 1/4 in. (206.4 x 104.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -235,7 +257,8 @@
     "objectEndDate": "1539",
     "medium": "Oil on wood",
     "dimensions": "37 5/8 x 29 1/2 in. (95.6 x 74.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -247,7 +270,8 @@
     "objectEndDate": "1454",
     "medium": "Tempera, silver, and gold on wood",
     "dimensions": "Overall, with engaged frame, diameter 36 1/2 in. (92.7 cm); recto, painted surface, diameter 24 5/8 in. (62.5 cm); verso, painted surface, diameter 29 5/8 in. (75.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -259,7 +283,8 @@
     "objectEndDate": "1300",
     "medium": "Tempera and gold on wood",
     "dimensions": "Overall, with engaged frame, 11 x 8 1/4 in. (27.9 x 21 cm); painted surface 9 3/8 x 6 1/2 in. (23.8 x 16.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -271,7 +296,8 @@
     "objectEndDate": "1640",
     "medium": "Oil on wood",
     "dimensions": "80 1/4 x 62 1/4 in. (203.8 x 158.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -283,7 +309,8 @@
     "objectEndDate": "1634",
     "medium": "Oil on canvas",
     "dimensions": "60 7/8 x 82 5/8 in. (154.6 x 209.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -295,7 +322,8 @@
     "objectEndDate": "1519",
     "medium": "Oil on linden",
     "dimensions": "23 5/8 x 19 5/8 in. (60 x 49.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -307,7 +335,8 @@
     "objectEndDate": "1525",
     "medium": "Oil on wood",
     "dimensions": "Shaped top: central panel, painted surface 38 3/4 x 29 1/4 in. (98.4 x 74.3 cm); each wing, painted surface 39 3/4 x 12 7/8 in. (101 x 32.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -319,7 +348,8 @@
     "objectEndDate": "1470",
     "medium": "Oil on wood",
     "dimensions": "73 1/4 x 45 1/4 in. (186.1 x 114.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -331,7 +361,8 @@
     "objectEndDate": "1892",
     "medium": "Oil on canvas",
     "dimensions": "25 3/4 x 32 1/4 in. (65.4 x 81.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -343,7 +374,8 @@
     "objectEndDate": "1605",
     "medium": "Oil on canvas",
     "dimensions": "67 1/4 x 42 1/2in. (170.8 x 108cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -355,7 +387,8 @@
     "objectEndDate": "1626",
     "medium": "Oil on canvas",
     "dimensions": "50 1/2 x 39 in. (128.3 x 99.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -367,7 +400,8 @@
     "objectEndDate": "1484",
     "medium": "Tempera, oil, and gold on wood",
     "dimensions": "32 x 23 1/2 in. (81.3 x 59.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -379,7 +413,8 @@
     "objectEndDate": "1515",
     "medium": "Oil on wood",
     "dimensions": "21 in. × 15 11/16 in. (53.3 × 39.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -391,7 +426,8 @@
     "objectEndDate": "1475",
     "medium": "Oil on wood",
     "dimensions": "(.626, Tommaso) overall 17 3/8 x 13 1/4 in. (44.1 x 33.7 cm), painted surface 16 5/8 x 12 1/2 in. (42.2 x 31.8 cm); (.627, Maria) overall 17 3/8 x 13 3/8 in. (44.1 x 34 cm); painted surface 16 5/8 x 12 5/8 in. (42.2 x 32.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -403,7 +439,8 @@
     "objectEndDate": "1625",
     "medium": "Oil on canvas",
     "dimensions": "61 in. × 40 1/4 in. (154.9 × 102.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -415,7 +452,8 @@
     "objectEndDate": "1633",
     "medium": "Oil on canvas",
     "dimensions": "46 x 37 in. (116.8 x 94 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -427,7 +465,8 @@
     "objectEndDate": "1648",
     "medium": "Oil on canvas",
     "dimensions": "82 1/2 x 60 3/4 in. (209.6 x 154.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -439,7 +478,8 @@
     "objectEndDate": "1891",
     "medium": "Oil on canvas",
     "dimensions": "44 3/4 x 34 1/2 in. (113.7 x 87.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -451,7 +491,8 @@
     "objectEndDate": "1895",
     "medium": "Oil on canvas",
     "dimensions": "28 3/4 x 36 3/8 in. (73 x 92.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -463,7 +504,8 @@
     "objectEndDate": "1788",
     "medium": "Oil on canvas",
     "dimensions": "50 x 40 in. (127 x 101.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -475,7 +517,8 @@
     "objectEndDate": "1888",
     "medium": "Oil on canvas",
     "dimensions": "39 1/4 x 59 in. (99.7 x 149.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -487,7 +530,8 @@
     "objectEndDate": "1446",
     "medium": "Oil on wood",
     "dimensions": "Overall 11 1/2 x 8 1/2 in. (29.2 x 21.6 cm); painted surface 11 1/2 x 7 3/8 in. (29.2 x 18.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -499,7 +543,8 @@
     "objectEndDate": "1877",
     "medium": "Oil on canvas",
     "dimensions": "45 x 61 3/8 in. (114.3 x 155.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -511,7 +556,8 @@
     "objectEndDate": "1532",
     "medium": "Oil and gold on oak",
     "dimensions": "16 5/8 x 12 3/4 in. (42.2 x 32.4 cm), with added strip of 1/2 in. (1.3 cm) at bottom",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -523,7 +569,8 @@
     "objectEndDate": "1884",
     "medium": "Oil on canvas",
     "dimensions": "27 3/4 x 41 in. (70.5 x 104.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -535,7 +582,8 @@
     "objectEndDate": "1751",
     "medium": "Oil on canvas",
     "dimensions": "42 5/8 x 33 1/2 in. (108.3 x 85.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -547,7 +595,8 @@
     "objectEndDate": "1639",
     "medium": "Oil on canvas",
     "dimensions": "40 1/8 x 48 5/8 in. (101.9 x 123.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -559,7 +608,8 @@
     "objectEndDate": "1609",
     "medium": "Oil on canvas",
     "dimensions": "46 3/8 x 55 5/8 in. (117.8 x 141.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -571,7 +621,8 @@
     "objectEndDate": "1597",
     "medium": "Oil on canvas",
     "dimensions": "36 1/4 x 46 5/8 in. (92.1 x 118.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -583,7 +634,8 @@
     "objectEndDate": "1779",
     "medium": "Oil on canvas",
     "dimensions": "40 x 50 in. (101.6 x 127 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -595,7 +647,8 @@
     "objectEndDate": "1720",
     "medium": "Oil on canvas",
     "dimensions": "21 3/4 x 17 in. (55.2 x 43.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -607,7 +660,8 @@
     "objectEndDate": "1891",
     "medium": "Oil on canvas",
     "dimensions": "41 1/8 x 43 1/4 in. (104.5 x 109.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -619,7 +673,8 @@
     "objectEndDate": "1790",
     "medium": "Oil on canvas",
     "dimensions": "94 in. × 57 1/2 in. (238.8 × 146.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -631,7 +686,8 @@
     "objectEndDate": "1912",
     "medium": "Oil on canvas",
     "dimensions": "44 3/4 x 63 in. (113.7 x 160 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -643,7 +699,8 @@
     "objectEndDate": "1734",
     "medium": "Oil on canvas",
     "dimensions": "24 x 24 7/8 in. (61 x 63.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -655,7 +712,8 @@
     "objectEndDate": "1864",
     "medium": "Oil on canvas",
     "dimensions": "25 3/4 x 35 1/2 in. (65.4 x 90.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -667,7 +725,8 @@
     "objectEndDate": "1787",
     "medium": "Oil on canvas",
     "dimensions": "58 1/8 x 47 3/8 in. (147.6 x 120.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -679,7 +738,8 @@
     "objectEndDate": "1675",
     "medium": "Oil on canvas",
     "dimensions": "39 3/8 x 51 1/4 in. (100 x 130.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -691,7 +751,8 @@
     "objectEndDate": "1533",
     "medium": "Oil on wood",
     "dimensions": "53 1/2 x 39 5/8 in. (135.9 x 100.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -703,7 +764,8 @@
     "objectEndDate": "1729",
     "medium": "Oil on canvas",
     "dimensions": "27 x 44 1/4 in. (68.6 x 112.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -715,7 +777,8 @@
     "objectEndDate": "1782",
     "medium": "Oil on canvas",
     "dimensions": "93 3/4 x 57 1/4 in. (238.1 x 145.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -727,7 +790,8 @@
     "objectEndDate": "1860",
     "medium": "Oil on canvas",
     "dimensions": "58 x 45 in. (147.3 x 114.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -739,7 +803,8 @@
     "objectEndDate": "1495",
     "medium": "Oil and tempera on wood",
     "dimensions": "Overall 27 3/4 x 34 1/8in. (70.5 x 86.7cm); painted surface 26 3/16 × 33 1/4 in. (66.5 × 84.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -751,7 +816,8 @@
     "objectEndDate": "1515",
     "medium": "Oil on wood",
     "dimensions": "Shaped top: central panel, overall, with engaged frame, 46 1/4 x 32 in. (117.5 x 81.3 cm); each wing, overall, with engaged frame, 47 1/2 x 14 in. (120.7 x 35.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -763,7 +829,8 @@
     "objectEndDate": "1815",
     "medium": "Oil on canvas",
     "dimensions": "29 5/8 x 22 7/8 in. (75.2 x 58.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -775,7 +842,8 @@
     "objectEndDate": "1867",
     "medium": "Oil on canvas",
     "dimensions": "64 x 102 3/8 in. (162.6 x 260 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -787,7 +855,8 @@
     "objectEndDate": "1516",
     "medium": "Oil, gold, and white metal on spruce",
     "dimensions": "Overall 35 1/4 x 30 1/4 in. (89.5 x 76.8 cm); painted surface 34 3/8 x 29 3/4 in. (87.3 x 75.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -799,7 +868,8 @@
     "objectEndDate": "1666",
     "medium": "Oil on canvas",
     "dimensions": "32 1/4 x 45 in. (81.9 x 114.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -811,7 +881,8 @@
     "objectEndDate": "1867",
     "medium": "Oil on canvas",
     "dimensions": "34 1/4 x 45 1/4 in. (87 x 114.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -823,7 +894,8 @@
     "objectEndDate": "1855",
     "medium": "Oil on canvas",
     "dimensions": "96 1/4 x 199 1/2 in. (244.5 x 506.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -835,7 +907,8 @@
     "objectEndDate": "1660",
     "medium": "Oil on canvas",
     "dimensions": "31 5/8 x 26 1/2 in. (80.3 x 67.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -847,7 +920,8 @@
     "objectEndDate": "1331",
     "medium": "Tempera on wood, gold ground",
     "dimensions": "22 1/2 x 14 7/8 in. (57.2 x 37.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -859,7 +933,8 @@
     "objectEndDate": "1892",
     "medium": "Oil on cardboard",
     "dimensions": "33 3/4 x 26 in. (85.7 x 66 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -871,7 +946,8 @@
     "objectEndDate": "1565",
     "medium": "Oil on wood",
     "dimensions": "Overall, including added strips at top, bottom, and right, 46 7/8 x 63 3/4 in. (119 x 162 cm); original painted surface 45 7/8 x 62 7/8 in. (116.5 x 159.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -883,7 +959,8 @@
     "objectEndDate": "1830",
     "medium": "Oil on canvas",
     "dimensions": "13 3/4 x 17 1/4 in. (34.9 x 43.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -895,7 +972,8 @@
     "objectEndDate": "1529",
     "medium": "Oil on canvas",
     "dimensions": "36 3/8 x 43 7/8 in. (92.4 x 111.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -907,7 +985,8 @@
     "objectEndDate": "1887",
     "medium": "Oil on canvas",
     "dimensions": "16 x 12 1/2 in. (40.6 x 31.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -919,7 +998,8 @@
     "objectEndDate": "1772",
     "medium": "Oil on canvas",
     "dimensions": "41 1/2 x 60 1/2 in. (105.4 x 153.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -931,7 +1011,8 @@
     "objectEndDate": "1875",
     "medium": "Oil on canvas",
     "dimensions": "32 1/4 x 25 1/2 in. (81.9 x 64.8 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -943,7 +1024,8 @@
     "objectEndDate": "1883",
     "medium": "Oil on canvas",
     "dimensions": "36 1/4 x 28 1/2 in. (92.1 x 72.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -955,7 +1037,8 @@
     "objectEndDate": "1533",
     "medium": "Oil on beech",
     "dimensions": "40 1/8 x 28in. (101.9 x 71.1cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -967,7 +1050,8 @@
     "objectEndDate": "1600",
     "medium": "Oil on canvas",
     "dimensions": "47 3/4 x 42 3/4 in. (121.3 x 108.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -979,7 +1063,8 @@
     "objectEndDate": "1619",
     "medium": "Oil on canvas",
     "dimensions": "75 1/4 x 93 1/4 in. (191.1 x 236.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -991,7 +1076,8 @@
     "objectEndDate": "1465",
     "medium": "Oil on wood",
     "dimensions": "Overall 12 1/2 x 8 3/4 in. (31.8 x 22.2 cm): painted surface, each side 11 3/4 x 8 in. (29.8 x 20.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1003,7 +1089,8 @@
     "objectEndDate": "1667",
     "medium": "Oil on canvas",
     "dimensions": "17 1/2 x 15 3/4 in. (44.5 x 40 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1015,7 +1102,8 @@
     "objectEndDate": "1866",
     "medium": "Oil on canvas",
     "dimensions": "72 7/8 x 50 5/8 in. (185.1 x 128.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1027,7 +1115,8 @@
     "objectEndDate": "1879",
     "medium": "Oil on canvas",
     "dimensions": "100 x 110 in. (254 x 279.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1039,7 +1128,8 @@
     "objectEndDate": "1875",
     "medium": "Oil on canvas",
     "dimensions": "33 1/2 x 43 3/8 in. (85.1 x 110.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1051,7 +1141,8 @@
     "objectEndDate": "1459",
     "medium": "Tempera on canvas, transferred from wood",
     "dimensions": "Overall 15 3/4 x 21 7/8 in. (40 x 55.6 cm); painted surface 14 7/8 x 21 in. (37.8 x 53.3 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1063,7 +1154,8 @@
     "objectEndDate": "1890",
     "medium": "Oil on canvas",
     "dimensions": "45 7/8 x 35 1/4 in. ( 116.5 x 89.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1075,7 +1167,8 @@
     "objectEndDate": "1650",
     "medium": "Oil on canvas",
     "dimensions": "32 x 27 1/2 in. (81.3 x 69.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1087,7 +1180,8 @@
     "objectEndDate": "1866",
     "medium": "Oil on canvas",
     "dimensions": "51 x 77 in. (129.5 x 195.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1099,7 +1193,8 @@
     "objectEndDate": "1658",
     "medium": "Oil on canvas",
     "dimensions": "46 7/8 x 72 in. (119.1 x 182.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1111,7 +1206,8 @@
     "objectEndDate": "1869",
     "medium": "Oil on canvas",
     "dimensions": "31 3/4 x 26 in. (80.6 x 66 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1123,7 +1219,8 @@
     "objectEndDate": "1667",
     "medium": "Oil on canvas",
     "dimensions": "18 x 16 in. (45.7 x 40.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1135,7 +1232,8 @@
     "objectEndDate": "1890",
     "medium": "Oil on canvas",
     "dimensions": "29 x 36 1/4 in. (73.7 x 92.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1147,7 +1245,8 @@
     "objectEndDate": "1874",
     "medium": "Oil on canvas",
     "dimensions": "38 1/4 x 51 1/4 in. (97.2 x 130.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1159,7 +1258,8 @@
     "objectEndDate": "1653",
     "medium": "Oil on canvas",
     "dimensions": "56 1/2 x 53 3/4 in. (143.5 x 136.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1171,7 +1271,8 @@
     "objectEndDate": "1787",
     "medium": "Oil on canvas",
     "dimensions": "51 x 77 1/4 in. (129.5 x 196.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1183,7 +1284,8 @@
     "objectEndDate": "1835",
     "medium": "Oil on canvas",
     "dimensions": "71 x 106 1/2 in. (180.3 x 270.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1195,7 +1297,7 @@
     "objectEndDate": "1509",
     "medium": "Oil and gold on wood",
     "dimensions": "Main panel, overall 67 7/8 x 67 7/8 in. (172.4 x 172.4 cm), painted surface 66 3/4 x 66 1/2 in. (169.5 x 168.9 cm); lunette, overall 29 1/2 x 70 7/8 in. (74.9 x 180 cm), painted surface 25 1/2 x 67 1/2 in. (64.8 x 171.5 cm)",
-    "notes": ""
+    "notes": []
 },
 
 {
@@ -1207,7 +1309,8 @@
     "objectEndDate": "1874",
     "medium": "Oil on canvas",
     "dimensions": "32 7/8 x 30 3/8 in. (83.5 x 77.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1219,7 +1322,8 @@
     "objectEndDate": "1445",
     "medium": "Tempera on wood",
     "dimensions": "25 1/4 x 16 1/2 in. (64.1 x 41.9 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1231,7 +1335,8 @@
     "objectEndDate": "1617",
     "medium": "Oil on canvas",
     "dimensions": "51 3/4 x 39 1/4 in. (131.4 x 99.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1243,7 +1348,8 @@
     "objectEndDate": "1865",
     "medium": "Oil on canvas",
     "dimensions": "29 x 36 1/2 in. (73.7 x 92.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1255,7 +1361,8 @@
     "objectEndDate": "1500",
     "medium": "Tempera and oil transferred to Masonite",
     "dimensions": "27 3/4 x 66 3/4 in. (70.5 x 169.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1267,7 +1374,8 @@
     "objectEndDate": "1785",
     "medium": "Oil on canvas",
     "dimensions": "83 x 59 1/2 in. (210.8 x 151.1 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1279,7 +1387,8 @@
     "objectEndDate": "1852",
     "medium": "Oil on canvas",
     "dimensions": "76 3/4 x 102 3/4 in. (194.9 x 261 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1291,7 +1400,8 @@
     "objectEndDate": "1675",
     "medium": "Oil on canvas",
     "dimensions": "55 1/2 x 51 3/4 in. (141 x 131.4 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1303,7 +1413,8 @@
     "objectEndDate": "1679",
     "medium": "Oil on canvas",
     "dimensions": "65 1/4 x 43 in. (165.7 x 109.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1315,7 +1426,8 @@
     "objectEndDate": "1441",
     "medium": "Oil on canvas, transferred from wood",
     "dimensions": "Each 22 1/4 x 7 2/3 in. (56.5 x 19.7 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1327,7 +1439,8 @@
     "objectEndDate": "1888",
     "medium": "Pastel on light green wove paper, now discolored to warm gray, affixed to original pulpboard mount",
     "dimensions": "29 1/8 x 23 7/8 in. (74 x 60.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1339,7 +1452,8 @@
     "objectEndDate": "1913",
     "medium": "Oil on canvas",
     "dimensions": "59 x 43 1/2 in. (149.9 x 110.5 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1351,7 +1465,8 @@
     "objectEndDate": "1756",
     "medium": "Oil on canvas",
     "dimensions": "28 3/4 x 37 in. (73 x 94 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1363,7 +1478,8 @@
     "objectEndDate": "1645",
     "medium": "Oil on canvas",
     "dimensions": "52 1/2 x 40 1/4 in. (133.4 x 102.2 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1375,7 +1491,8 @@
     "objectEndDate": "1789",
     "medium": "Oil on canvas",
     "dimensions": "45 x 34 1/2 in. (114.3 x 87.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 },
 
 {
@@ -1387,5 +1504,6 @@
     "objectEndDate": "1850",
     "medium": "Oil on canvas",
     "dimensions": "36 1/8 x 48 1/4 in. (91.8 x 122.6 cm)",
-    "notes": ""
+    "notes": [],
+    "description": ""
 }]

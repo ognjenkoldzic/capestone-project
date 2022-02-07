@@ -28,15 +28,17 @@ function SingleFlashCard({ flashCard }) {
   return (
     <CardStyled height={height} flip={flip} onClick={() => setFlip(!flip)}>
       <CardFront flip={flip} ref={frontEl}>
-        {flashCard.question}
-        <div>
+        <h3>Question:</h3>
+        <span>{flashCard.question}</span>
+        <ol>
           {flashCard.options.map((option) => {
-            return <div key={option}>{option}</div>;
+            return <li key={option}>{option}</li>;
           })}
-        </div>
+        </ol>
       </CardFront>
       <CardBack flip={flip} ref={backEl}>
-        {flashCard.answer}
+        <h3>Answer:</h3>
+        <span>{flashCard.answer}</span>
       </CardBack>
     </CardStyled>
   );
@@ -47,7 +49,7 @@ export default SingleFlashCard;
 const CardStyled = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   border-radius: 0.25rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0, 0.3);
@@ -60,11 +62,19 @@ const CardStyled = styled.div`
 `;
 
 const CardFront = styled.div`
+  text-align: left;
   position: absolute;
   padding: 1rem;
   backface-visibility: hidden;
   transform: rotateY(0deg);
-  div {
+  h3 {
+    margin: 0.5rem;
+    text-align: center;
+  }
+  ol {
+    text-align: left;
+    margin: 0.2rem;
+    padding-left: 38%;
   }
 `;
 const CardBack = styled.div`
